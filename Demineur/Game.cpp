@@ -137,7 +137,7 @@ void SearchPlant(int numOfBomb, int gridSize, int* bomb, int* dontPlantBomb, int
 }
 void PlantBombs(Cell* cells, int gridSize, int* dontPlantBomb, int dontplantSize)
 {
-	int numOfBomb = gridSize / 15;
+	int numOfBomb = gridSize*0.15;
 	int* bomb = CreateIntArray(numOfBomb);
 	SearchPlant(numOfBomb, gridSize, bomb, dontPlantBomb, dontplantSize);
 

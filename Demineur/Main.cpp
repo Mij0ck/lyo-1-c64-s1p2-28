@@ -47,11 +47,11 @@ void ChooseCase(int* index, Grid* grid)
 	int col;
 	do
 	{
-		row = AskInt("Row num ?");
-		if (row <= grid[0].row && row >= 0)
+		col = AskInt("Col num ?");
+		if (col <= grid[0].col && col >= 0)
 		{
-			col = AskInt("Col num ?");
-			if (col <= grid[0].col && col >= 0)
+			row = AskInt("Row num ?");
+			if (row <= grid[0].row && row >= 0)
 			{
 				a = false;
 			}

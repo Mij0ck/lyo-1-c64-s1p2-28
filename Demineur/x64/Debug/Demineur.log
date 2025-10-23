@@ -1,5 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (Demineur2.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
-  Main.cpp
-C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(160,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(37): warning C4715: 'ChooseMove' : les chemins de contrôle ne retournent pas tous une valeur
-  Demineur.vcxproj -> C:\Users\strinh\Desktop\solution\x64\Debug\Demineur.exe
+  Game.cpp
+C:\Users\strinh\Documents\GitHub\lyo-1-c64-s1p2-28\Demineur\Game.cpp(140,16): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+  Demineur.vcxproj -> C:\Users\strinh\Documents\GitHub\lyo-1-c64-s1p2-28\x64\Debug\Demineur.exe
