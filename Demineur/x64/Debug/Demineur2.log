@@ -1,0 +1,13 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (Demineur.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
+  Basic.cpp
+  Difficulty.cpp
+  Game.cpp
+  Main.cpp
+C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(98,6): warning C4101: 'colChoosen' : variable locale non référencée
+C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(97,6): warning C4101: 'rowChoosen' : variable locale non référencée
+C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(160,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  PlayerInteraction.cpp
+  Vecteur.cpp
+  Génération de code en cours...
+C:\Users\strinh\Desktop\solution\Projet1 bug\Demineur\Main.cpp(37): warning C4715: 'ChooseMove' : les chemins de contrôle ne retournent pas tous une valeur
+  Demineur2.vcxproj -> C:\Users\strinh\Desktop\solution\x64\Debug\Demineur2.exe
