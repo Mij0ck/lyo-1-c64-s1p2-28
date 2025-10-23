@@ -1,2 +1,14 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (Demineur2.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
-  Demineur.vcxproj -> C:\Users\strinh\Documents\GitHub\lyo-1-c64-s1p2-28\x64\Debug\Demineur.exe
+  Basic.cpp
+  Grid.cpp
+  GameManager.cpp
+C:\Users\steve\Documents\GitHub\lyo-1-c64-s1p2-28\Demineur\GameManager.cpp(141,16): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+  Main.cpp
+C:\Users\steve\Documents\GitHub\lyo-1-c64-s1p2-28\Demineur\Main.cpp(9,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  PlayerInteraction.cpp
+  Cell.cpp
+  Génération de code en cours...
+C:\Users\steve\Documents\GitHub\lyo-1-c64-s1p2-28\Demineur\GameManager.cpp(227,1): warning C4715: 'ChooseMove' : les chemins de contrôle ne retournent pas tous une valeur
+  Demineur.vcxproj -> C:\Users\steve\Documents\GitHub\lyo-1-c64-s1p2-28\x64\Debug\Demineur.exe
+  'pwsh.exe' n'est pas reconnu en tant que commande interne
+  ou externe, un programme exécutable ou un fichier de commandes.

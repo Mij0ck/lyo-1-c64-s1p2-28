@@ -3,6 +3,7 @@
 #include"Basic.h"
 #include <iostream>
 
+//Initiate (probably should supprim it from the .h)
 void InitGrid(Grid* result, int row, int col)
 {
 	result->row = row;
@@ -10,6 +11,7 @@ void InitGrid(Grid* result, int row, int col)
 	result->totalSize = row * col;
 }
 
+//Difficulty Fonction
 void ShowDifficultyChoice()
 {
 	Print("Difficulty :");
@@ -37,6 +39,7 @@ void Personnal(Grid* result)
 	InitGrid(result, row, col);
 }
 
+//Entry Door Fonction
 Grid DefineGrid()
 {
 	Grid result;

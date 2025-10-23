@@ -4,7 +4,49 @@
 #include"GameManager.h"
 #include"Basic.h"
 
+//Basic Game Fonction
+int GetIndex(int maxCol, int row, int col)
+{
+	int index = row * maxCol + col;
+	return index;
+}
+void SupprInArray(int** array, int* size, int indexToRemove)
+{
+	*size -= 1;
+	int* newArray = CreateIntArray(*size);
+	bool z = false;
+	for (int i = 0; i < indexToRemove; i++)
+	{
+		newArray[i] = (*array)[i];
+	}
 
+	for (int i = indexToRemove; i < *size; i++)
+	{
+		newArray[i] = (*array)[i + 1];
+	}
+
+	free(*array);
+	*array = newArray;
+}
+int* getSurroundingCase(Cell* demineur, int index, int gridSize, int* size)
+{
+	*size = 8;
+	int* result = CreateIntArray(*size);
+	int z = 0;
+	for (int i = 0; i < gridSize; i++)			//regarde si i est une case au tour de l'index
+		if (demineur[i].row == demineur[index].row - 1 || demineur[i].row == demineur[index].row || demineur[i].row == demineur[index].row + 1)
+			if (demineur[i].col == demineur[index].col - 1 || demineur[i].col == demineur[index].col || demineur[i].col == demineur[index].col + 1)
+				if (i != index && !demineur[i].reveal)		//si la case n'est pas l'index et n'est pas reveler
+				{
+					result[z] = i;
+					z++;
+				}
+	*size = z;
+	result = SmallerArray(result, *size);
+	return result;
+}
+
+//Game Loading Fonction
 void PrintColNum(Cell* cells, Grid* grid)
 {
 	std::cout << "    ";
@@ -69,30 +111,14 @@ void Init(Cell* cells, Grid* grid)
 	PrintLine(cells, grid);
 }
 
-int* getNearCase(Cell* demineur, int index, int gridSize, int* size)
-{
-	*size = 8;
-	int* result = CreateIntArray(*size);
-	int z = 0;
-	for (int i = 0; i < gridSize; i++)			//regarde si i est une case au tour de l'index
-		if (demineur[i].row == demineur[index].row - 1 || demineur[i].row == demineur[index].row || demineur[i].row == demineur[index].row + 1)
-			if (demineur[i].col == demineur[index].col - 1 || demineur[i].col == demineur[index].col || demineur[i].col == demineur[index].col + 1)
-				if (i != index && !demineur[i].reveal)		//si la case n'est pas l'index et n'est pas reveler
-				{
-					result[z] = i;
-					z++;
-				}
-	*size = z;
-	result = SmallerArray(result, *size);
-	return result;
-}
+//Game Bomb Update Fonction
 void PlantAllBombs(Cell* cells, int* plantBomb, int numOfBombs, int gridSize)
 {
 	for (int i = 0; i < numOfBombs; i++)		//make bool bomb true for list of bomb
 	{
 		cells[plantBomb[i]].bomb = true;
 		int nearSize;
-		int* nearCase = getNearCase(cells, plantBomb[i], gridSize, &nearSize);
+		int* nearCase = getSurroundingCase(cells, plantBomb[i], gridSize, &nearSize);
 		for (int j = 0; j < nearSize; j++)		//rajoute 1 aux case alentour dedans nearbyBomb
 		{
 			cells[nearCase[j]].nearbyBomb += 1;
@@ -147,54 +173,7 @@ void PlantBombs(Cell* cells, int gridSize, int* dontPlantBomb, int dontplantSize
 	bomb = nullptr;
 }
 
-void SupprInArray(int** array, int* size, int indexToRemove)
-{
-	*size -= 1;
-	int* newArray = CreateIntArray(*size);
-	bool z = false;
-	for (int i = 0; i < indexToRemove; i++)
-	{
-		newArray[i] = (*array)[i];
-	}
-
-	for (int i = indexToRemove; i < *size; i++)
-	{
-		newArray[i] = (*array)[i + 1];
-	}
-
-	free(*array);
-	*array = newArray;
-}
-
-void ClearVision(Cell* demineur, int index, Grid* difficulty)
-{
-	int tmpSize = 1;
-	int* tmp = CreateIntArray(tmpSize);
-	tmp[0] = index;
-	for (int i = 0; i < tmpSize; i++)			//rendre visible les cases :
-	{
-		demineur[tmp[i]].reveal = true;			//rendre visible la case choisit
-		if (demineur[tmp[i]].nearbyBomb == 0)	//regarde si la case choisie n'a pas de bombes au tour
-		{
-			int nearbySize;
-			int* nearby = getNearCase(demineur, tmp[i], difficulty[0].totalSize, &nearbySize);	//récupère les cases au tour
-			SupprInArray(&tmp, &tmpSize, i);				//supprime la case verifier de la list
-			i--;
-			for (int j = 0; j < nearbySize; j++)			//faire le tour des case autour
-			{
-				demineur[nearby[j]].reveal = true;
-				if (demineur[nearby[j]].nearbyBomb != 0)
-				{
-					SupprInArray(&nearby, &nearbySize, j);
-					j--;
-				}
-			}
-			MergeIndexArray(&tmp, nearby, &tmpSize, nearbySize);
-		}
-	}
-	free(tmp);
-	tmp = nullptr;
-}
+//Player Management Fonction
 void PrintMoveAvailable()
 {
 	Print("1 . Clear a case.");
@@ -225,7 +204,6 @@ int ChooseMove()
 	} while (a);
 
 }
-
 void ChooseCase(int* index, Grid* grid)
 {
 	bool a = true;
@@ -245,10 +223,45 @@ void ChooseCase(int* index, Grid* grid)
 	} while (a);
 	*index = GetIndex(grid[0].col, row, col);
 }
+void PlayerMove(Cell* demineur, Grid* grid, int* moveChoosen, int* index)
+{
+	*moveChoosen = ChooseMove();
+	ChooseCase(index, grid);
+}
 
+//Game Management Fonction
 void FlagManageur(Cell* demineur, int index, Grid* grid)
 {
 	demineur[index].flag = !demineur[index].flag;
+}
+void ClearVision(Cell* demineur, int index, Grid* difficulty)
+{
+	int tmpSize = 1;
+	int* tmp = CreateIntArray(tmpSize);
+	tmp[0] = index;
+	for (int i = 0; i < tmpSize; i++)			//rendre visible les cases :
+	{
+		demineur[tmp[i]].reveal = true;			//rendre visible la case choisit
+		if (demineur[tmp[i]].nearbyBomb == 0)	//regarde si la case choisie n'a pas de bombes au tour
+		{
+			int nearbySize;
+			int* nearby = getSurroundingCase(demineur, tmp[i], difficulty[0].totalSize, &nearbySize);	//récupère les cases au tour
+			SupprInArray(&tmp, &tmpSize, i);				//supprime la case verifier de la list
+			i--;
+			for (int j = 0; j < nearbySize; j++)			//faire le tour des case autour
+			{
+				demineur[nearby[j]].reveal = true;
+				if (demineur[nearby[j]].nearbyBomb != 0)
+				{
+					SupprInArray(&nearby, &nearbySize, j);
+					j--;
+				}
+			}
+			MergeIndexArray(&tmp, nearby, &tmpSize, nearbySize);
+		}
+	}
+	free(tmp);
+	tmp = nullptr;
 }
 void Update(Cell* demineur, Grid* grid, int moveChoosen, int index)
 {
@@ -259,11 +272,6 @@ void Update(Cell* demineur, Grid* grid, int moveChoosen, int index)
 	else
 		Print("Error Fonction Update.");
 
-}
-void PlayerMove(Cell* demineur, Grid* grid, int* moveChoosen, int* index)
-{
-	*moveChoosen = ChooseMove();
-	ChooseCase(index, grid);
 }
 void Play()
 {
@@ -284,7 +292,7 @@ void Play()
 	int index;
 	ChooseCase(&index, &grid);
 	int nobombSize;
-	int* nobomb = getNearCase(cells, index, grid.totalSize, &nobombSize);
+	int* nobomb = getSurroundingCase(cells, index, grid.totalSize, &nobombSize);
 	PlantBombs(cells, grid.totalSize, nobomb, nobombSize);
 	ClearVision(cells, index, &grid);
 
@@ -340,6 +348,8 @@ bool PlayAgain()
 			Print("Please enter y or n.");
 	} while (true);
 }
+
+//Entry Door Fonction
 void GameManager()
 {
 	bool play;

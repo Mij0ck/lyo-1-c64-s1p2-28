@@ -2,6 +2,7 @@
 #include"Basic.h"
 #include<iostream>
 
+//Create Array
 Cell* CreateCellsArray(int size)
 {
 	Cell* p = (Cell*)malloc(sizeof(Cell) * size);
@@ -12,6 +13,8 @@ Cell* CreateCellsArray(int size)
 	}
 	return p;
 }
+
+//Initiate
 void InitVecteur(Cell* vecteur, int row, int col)
 {
 	vecteur->col = col;

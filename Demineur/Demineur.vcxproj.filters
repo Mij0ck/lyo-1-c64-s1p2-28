@@ -9,15 +9,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Gichier .h ++">
-      <UniqueIdentifier>{be10a1a6-5901-4e67-bf9d-0f46854a2d78}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Fichier .h demander">
       <UniqueIdentifier>{b365ebce-a682-4674-88ae-a8ec4b6a1119}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers Main">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fichier .h ++">
+      <UniqueIdentifier>{be10a1a6-5901-4e67-bf9d-0f46854a2d78}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,14 +30,11 @@
     <ClCompile Include="Grid.cpp">
       <Filter>Fichiers d%27en-tête\Fichier .h demander</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerInteraction.cpp">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
-    </ClCompile>
     <ClCompile Include="GameManager.cpp">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier .h ++</Filter>
     </ClCompile>
     <ClCompile Include="Basic.cpp">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier .h ++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,14 +44,11 @@
     <ClInclude Include="Grid.h">
       <Filter>Fichiers d%27en-tête\Fichier .h demander</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerInteraction.h">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
-    </ClInclude>
     <ClInclude Include="GameManager.h">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier .h ++</Filter>
     </ClInclude>
     <ClInclude Include="Basic.h">
-      <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
+      <Filter>Fichiers d%27en-tête\Fichier .h ++</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

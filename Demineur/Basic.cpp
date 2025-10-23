@@ -2,6 +2,7 @@
 
 #include "Basic.h"
 
+//Base Fonction
 void Print(const char* msg)
 {
 	std::cout << msg << std::endl;
@@ -13,11 +14,8 @@ int AskInt(const char* msg)
 	std::cin >> value;
 	return value;
 }
-int GetIndex(int maxCol, int row, int col)
-{
-	int index = row * maxCol + col;
-	return index;
-}
+
+//Array Management Fonction
 int* CreateIntArray(int size)
 {
 	int* p = (int*)malloc(sizeof(int) * size);
