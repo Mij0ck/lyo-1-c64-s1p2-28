@@ -33,7 +33,7 @@
     <ClCompile Include="PlayerInteraction.cpp">
       <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="GameManager.cpp">
       <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
     </ClCompile>
     <ClCompile Include="Basic.cpp">
@@ -50,7 +50,7 @@
     <ClInclude Include="PlayerInteraction.h">
       <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="GameManager.h">
       <Filter>Fichiers d%27en-tête\Gichier .h ++</Filter>
     </ClInclude>
     <ClInclude Include="Basic.h">

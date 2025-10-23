@@ -13,7 +13,32 @@ int AskInt(const char* msg)
 	std::cin >> value;
 	return value;
 }
-
+int GetIndex(int maxCol, int row, int col)
+{
+	int index = row * maxCol + col;
+	return index;
+}
+int* CreateIntArray(int size)
+{
+	int* p = (int*)malloc(sizeof(int) * size);
+	if (p == nullptr)
+	{
+		Print("ERROR NO SPACE FOR INT ARRAY");
+		exit(1);
+	}
+	return p;
+}
+int* SmallerArray(int* array, int size)
+{
+	int* newArray = CreateIntArray(size);
+	for (int i = 0; i < size; i++)
+	{
+		newArray[i] = array[i];
+	}
+	free(array);
+	array = nullptr;
+	return newArray;
+}
 void MergeIndexArray(int** array1, int* array2,int *size1,int size2)
 {
 	int size = *size1 + size2;
@@ -47,27 +72,4 @@ void MergeIndexArray(int** array1, int* array2,int *size1,int size2)
 	*array1 = newArray;
 	array2 = nullptr;
 	*size1 = size;
-}
-
-int* CreateIntArray(int size)
-{
-	int* p = (int*)malloc(sizeof(int) * size);
-	if (p == nullptr)
-	{
-		Print("ERROR NO SPACE FOR INT ARRAY");
-		exit(1);
-	}
-	return p;
-}
-
-int* SmallerArray(int* array, int size)
-{
-	int* newArray = CreateIntArray(size);
-	for (int i = 0; i < size; i++)
-	{
-		newArray[i] = array[i];
-	}
-	free(array);
-	array = nullptr;
-	return newArray;
 }

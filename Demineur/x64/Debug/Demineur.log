@@ -1,4 +1,2 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (Demineur2.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
-  Game.cpp
-C:\Users\strinh\Documents\GitHub\lyo-1-c64-s1p2-28\Demineur\Game.cpp(140,16): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
   Demineur.vcxproj -> C:\Users\strinh\Documents\GitHub\lyo-1-c64-s1p2-28\x64\Debug\Demineur.exe

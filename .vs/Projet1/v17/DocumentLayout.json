@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Basic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\Basic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86C886A2-96CD-4FAC-84F8-FEFE1070133A}|Demineur\\Demineur.vcxproj|solutionrelative:Demineur\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +34,68 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Game.cpp",
-              "RelativeDocumentMoniker": "Demineur\\Game.cpp",
-              "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Game.cpp",
-              "RelativeToolTip": "Demineur\\Game.cpp",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-23T10:15:02.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Main.cpp",
               "RelativeDocumentMoniker": "Demineur\\Main.cpp",
               "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Main.cpp",
               "RelativeToolTip": "Demineur\\Main.cpp",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAADkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-23T10:13:04.413Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Basic.cpp",
+              "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Basic.cpp",
+              "RelativeDocumentMoniker": "Demineur\\Basic.cpp",
+              "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Basic.cpp",
+              "RelativeToolTip": "Demineur\\Basic.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-23T10:53:25.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cpp",
+              "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.cpp",
+              "RelativeDocumentMoniker": "Demineur\\GameManager.cpp",
+              "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.cpp",
+              "RelativeToolTip": "Demineur\\GameManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-23T10:51:11.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.h",
+              "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.h",
+              "RelativeDocumentMoniker": "Demineur\\GameManager.h",
+              "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\GameManager.h",
+              "RelativeToolTip": "Demineur\\GameManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-23T10:46:06.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Grid.cpp",
+              "DocumentMoniker": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Grid.cpp",
+              "RelativeDocumentMoniker": "Demineur\\Grid.cpp",
+              "ToolTip": "C:\\Users\\strinh\\Documents\\GitHub\\lyo-1-c64-s1p2-28\\Demineur\\Grid.cpp",
+              "RelativeToolTip": "Demineur\\Grid.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-23T10:48:34.173Z",
               "EditorCaption": ""
             }
           ]

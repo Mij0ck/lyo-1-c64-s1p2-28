@@ -1,5 +1,5 @@
 #pragma once
-#include"Game.h"
+#include"GameManager.h"
 #include"Basic.h"
 #include <iostream>
 
